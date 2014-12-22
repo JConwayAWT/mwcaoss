@@ -1,0 +1,54 @@
+doctype html
+html
+  head
+    title PGSS - Pennsylvania Governor's School for the Sciences
+    = stylesheet_link_tag    'application', media: 'all'
+    = javascript_include_tag 'application'
+    = csrf_meta_tags
+
+  body
+    #full-wrapper
+      #full-header
+        nav.navbar.navbar-inverse#no-border-radius.blue-navbar role="navigation"
+          .container-fluid
+            .navbar-header
+              button.navbar-toggle.collapsed type="button" data-toggle="collapse" data-target="#pgss-navbar"
+                span.sr-only Toggle Navigation
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+              .navbar-brand
+                a.raleway href="/" style="color:white; font-size:40px; text-decoration: none; background-color: transparent" AOSS
+
+            .navbar-collapse.collapse#pgss-navbar
+              ul.nav.navbar-nav.navbar-right style="padding-right: 25px;"
+
+                li
+                  a.single-header-link href="#" About
+
+                li
+                  a.single-header-link href="#" style="background-color: transparent" Service of Process
+
+                li
+                  a.single-header-link href="#" style="background-color: transparent" Research & Investigation
+
+                li
+                  a.single-header-link href="#" style="background-color: transparent" Court Services
+
+                li
+                  a.single-header-link href="#" style="background-color: transparent" Careers
+
+                li
+                  a.single-header-link href="#" style="background-color: transparent" Contact
+
+      #full-content
+        .container#body-container
+          = yield
+
+      #full-footer
+        .footer#footer
+          .container
+            .row
+              .col-md-12
+                .text-center.soft-gray-text.small-text.text-padded-top
+                  | Portions of this site ©#{Time.now.year} by Attorney Outsourcing Support Services.

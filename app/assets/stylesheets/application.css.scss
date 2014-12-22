@@ -1,0 +1,164 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+ @import url(http://fonts.googleapis.com/css?family=Raleway);
+
+ html, body{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.raleway{
+  font-family: 'Raleway';
+  font-weight: 700;
+}
+
+#full-wrapper{
+  min-height: 100%;
+  position: relative;
+}
+
+#full-header{
+
+}
+
+#full-content{
+  padding-bottom: 90px;
+}
+
+#full-footer{
+  background-color: #eeeeee !important;
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+#no-border-radius{
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.black-navbar{
+  background-color: #000000;
+  border: none;
+  .white-right-border{
+    border-right: thin solid white;
+  }
+}
+
+#body-container{
+  a{
+    &:hover{
+      background-color: transparent;
+    }
+  }
+
+  .panel-default{
+    margin-bottom: 5px;
+  }
+
+  min-height: 72%;
+}
+
+.black-caption-overlay{
+  background-color: black;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.4;
+  height: 30%;
+  top: 70%;
+}
+
+#footer{
+  border-top: thin solid #cccccc;
+  .soft-gray-text{
+    color: #969696;
+  }
+  .small-text{
+    font-size: 11px;
+  }
+  .text-padded-top{
+    padding-top: 8px;
+  }
+}
+
+.white-header-link{
+  color: white;
+}
+
+.caret-medium {
+  display: inline-block;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #FFFFFF;
+  margin-left: 8px;
+}
+
+.no-click-color-change{
+  background-color: transparent !important;
+}
+
+.open{
+  .dropdown-menu{
+    li{
+      a{
+        color: #555555 !important;
+        &:hover{
+          color: black !important;
+          background-color: rgb(255, 255, 205) !important;
+        }
+      }
+    }
+  }
+}
+
+.navbar-nav{
+  .open{
+    .dropdown-menu{
+      background-color: rgb(246, 255, 184);
+    }
+  }
+}
+
+.single-header-link{
+  font-size: 10pt;
+  padding: 10px 10px;
+}
+
+.no-bottom-margin{
+  margin-bottom: 0px;
+}
+
+.full-width-image{
+  width: 100%;
+}
+
+.carousel-caption{
+  bottom: none;
+  top: 20px;
+  right: inherit;
+  left: 65%;
+  font-size: 24px;
+}

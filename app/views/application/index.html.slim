@@ -1,0 +1,26 @@
+#home-page-carousel.carousel.slide data-ride="carousel"
+  ol.carousel-indicators
+  .carousel-inner role="listbox"
+    .item.active
+      = image_tag "philadelphia.png", size: "1286x400", class: "full-width-image"
+      .carousel-caption
+        p 
+          b Philadelphia, PA
+
+    .item
+      = image_tag "newyorkcity.png", size: "1286x400", class: "full-width-image"
+      .carousel-caption
+        p
+          b New York, NY
+
+    .item
+      = image_tag "washingtondc.png", size: "1286x400", class: "full-width-image"
+      .carousel-caption
+        p
+          b Washington, DC
+
+  a.left.carousel-control data-slide="prev" href="#home-page-carousel" role="button"
+    span.glyphicon.glyphicon-chevron-left
+
+  a.right.carousel-control data-slide="next" href="#home-page-carousel" role="button"
+    span.glyphicon.glyphicon-chevron-right
