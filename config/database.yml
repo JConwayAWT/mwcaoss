@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: aoss_production
-  username: aoss
+  username: postgres
   password: <%= ENV['AOSS_DATABASE_PASSWORD'] %>
