@@ -6,5 +6,8 @@ class ApplicationController < ActionController::Base
   def index
     render layout: "less_padding"
   end
+
+  def about
+  end
   
 end

@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'application#index'
 
+  match "/about", to: "application#about", via: :get
+  match "/service_of_process", to: "application#service_of_process", via: :get
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
