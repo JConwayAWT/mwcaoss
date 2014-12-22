@@ -9,5 +9,11 @@ class ApplicationController < ActionController::Base
 
   def about
   end
+
+  def service_of_process
+  end
+
+  def research_and_investigation
+  end
   
 end

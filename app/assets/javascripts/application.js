@@ -14,3 +14,27 @@
 //= require jquery_ujs
 //= require_tree .
 //= require bootstrap-sprockets
+
+$(document).ready(function(){
+
+  $("#contact-us-submit").click(function(){
+    var contact_form = $("#contact-us-form").find("form").serialize()
+
+    $.ajax({
+      url: '/contact_requests',
+      type: 'POST',
+      dataType: "JSON",
+      data: contact_form
+    })
+    .done(function(data) {
+      console.log("success");
+      debugger
+    })
+    .fail(function(data) {
+      console.log("error");
+      debugger
+    });
+    
+  });
+
+});

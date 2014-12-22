@@ -11,9 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20141222212817) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "contact_requests", force: true do |t|
+    t.string   "name"
+    t.string   "company"
+    t.text     "address"
+    t.string   "email"
+    t.string   "telephone"
+    t.string   "best_time_to_contact"
+    t.text     "inquiry_details"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

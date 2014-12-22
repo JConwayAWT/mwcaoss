@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :contact_requests
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -7,6 +9,10 @@ Rails.application.routes.draw do
 
   match "/about", to: "application#about", via: :get
   match "/service_of_process", to: "application#service_of_process", via: :get
+  match "research_and_investigation", to: "application#research_and_investigation", via: :get
+  match "/court_services", to: "application#court_services", via: :get
+  match "/contact", to: "application#contact", via: :get
+  match "/careers", to: "application#careers", via: :get
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
