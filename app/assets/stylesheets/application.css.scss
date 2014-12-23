@@ -225,3 +225,12 @@ h1, h2, h3, h4{
   }
   display: none;
 }
+
+.affiliation-image-container{
+  width: 20%;
+  display: inline-block;
+  text-align: center;
+  .affiliation-image{
+    width: 65%;
+  }
+}
