@@ -17,11 +17,16 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
  @import url(http://fonts.googleapis.com/css?family=Raleway);
+ @import url(http://fonts.googleapis.com/css?family=Roboto:400,100,300);
 
  html, body{
   margin: 0;
   padding: 0;
   height: 100%;
+}
+
+h1, h2, h3, h4{
+  font-family: 'Roboto', sans-serif;
 }
 
 .raleway{
@@ -168,11 +173,14 @@
   font-weight: 700;
   padding: 20px 0px;
   margin-bottom: 15px;
-  background-color: #F4F4F4
+  background-color: #F4F4F4;
+  font-family: 'Roboto', sans-serif;
 }
 
 .medium-text{
   font-size: 13pt;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
 }
 
 .callout-right{
@@ -184,7 +192,9 @@
   margin: 5px 5px;
   border-radius: 10px;
   font-size: 14pt;
-  font-weight: 700;
+  font-weight: 400;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
 }
 
 .contact-us-button{
