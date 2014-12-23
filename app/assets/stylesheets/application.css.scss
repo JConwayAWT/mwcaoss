@@ -29,6 +29,18 @@ h1, h2, h3, h4{
   font-family: 'Roboto', sans-serif;
 }
 
+nav.navbar{
+    background-color: #f4f4f4;
+}
+
+.navbar-toggle{
+  background-color: white;
+  border: thin solid gray;
+  .icon-bar{
+    background-color: rgb(102, 102, 102);
+  }
+}
+
 .raleway{
   font-family: 'Raleway';
   font-weight: 700;
