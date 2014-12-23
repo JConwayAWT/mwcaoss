@@ -43,6 +43,9 @@ html
                 li
                   a.single-header-link href="/contact" Contact
 
+                li
+                  a.single-header-link href="#contact-us" data-toggle="modal" data-target="#contactUsModal" Get a Quote
+
       #full-content
         #body-container
           = yield
@@ -54,3 +57,5 @@ html
               .col-md-12
                 .text-center.soft-gray-text.small-text.text-padded-top
                   | Portions of this site ©#{Time.now.year} by Attorney Outsourcing Support Services
+
+= render 'contact_modal'
