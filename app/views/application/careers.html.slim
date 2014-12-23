@@ -14,9 +14,9 @@ hr
 .row
   .col-md-6.col-md-offset-3
     h3.text-center Employment Application
-    = form_for(EmploymentApplication.new, html: {:onsubmit => "return confirm('Choose Cancel to continue working.  Otherwise, choose OK.')"}) do |f|
+    = form_for(EmploymentApplication.new) do |f|
       .form-group
-        = f.text_field :name, autofocus: true, placeholder: "Your name", class: "form-control"
+        = f.text_field :name, autofocus: true, placeholder: "Your name", required: true, class: "form-control"
       .form-group
         = f.text_field :business_name, placeholder: "Current business name", class: "form-control"
       .form-group
@@ -24,15 +24,15 @@ hr
       .form-group
         = f.text_field :telephone, placeholder: "Your phone number", class: "form-control"
       .form-group
-        = f.email_field :email, placeholder: "Your email address", class: "form-control"
+        = f.email_field :email, placeholder: "Your email address", required: true, class: "form-control"
       .form-group
         = f.text_area :current_sop_details, placeholder: "Details of current SOP area", class: "form-control"
       .form-group
         = f.text_field :how_did_you_hear, placeholder: "How did you hear of AOSS?", class: "form-control"
       .form-group
         = f.label "Please upload your resume"
-        = f.file_field :resume, class: "form-control"
+        = f.file_field :resume, required: true, class: "form-control"
 
       .pull-right
-        = f.submit "Submit application", confirm: "Are you sure?", class: "btn btn-primary"
+        = f.submit "Submit application", class: "btn btn-primary"
 
