@@ -17,20 +17,36 @@
 
 $(document).ready(function(){
 
+  $("#contactUsModal").on('shown.bs.modal', function(e){
+    $("#contact_request_name").focus();
+  });
+
   $("#contact-us-submit").click(function(){
     var contact_form = $("#contact-us-form").find("form").serialize()
+
+    $("#contact-us-submit").toggle();
+    $("#contact-us-cancel").toggle();
+    $("#contact-us-loading-indicator").toggle();
 
     $.ajax({
       url: '/contact_requests',
       type: 'POST',
-      dataType: "JSON",
+      dataType: 'JSON',
       data: contact_form
     })
     .done(function(data) {
+      $("#contact-us-submit").toggle();
+      $("#contact-us-cancel").toggle();
+      $("#contact-us-loading-indicator").toggle();
+
       $("#contactUsModal").modal("hide");
       $("#contactSuccessModal").modal("show");
     })
     .fail(function(data) {
+      $("#contact-us-submit").toggle();
+      $("#contact-us-cancel").toggle();
+      $("#contact-us-loading-indicator").toggle();
+
       $("#contactUsModal").modal("hide");
       $("#contactErrorModal").modal("show");
     });

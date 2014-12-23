@@ -201,3 +201,10 @@
 .black-bottom{
   border-bottom: thick solid black;
 }
+
+#contact-us-loading-indicator{
+  .contact-us-loading-text{
+    margin-left: 12px;
+  }
+  display: none;
+}

@@ -21,7 +21,10 @@ a.btn.btn-default.contact-us-button href="#contact-us" role="button" data-toggle
             .form-group
               = f.text_area :inquiry_details, placeholder: "Tell us how we can help you", rows: 6, class: "form-control"
           .modal-footer
-            button.btn.btn-default type="button" data-dismiss="modal" Cancel
+            #contact-us-loading-indicator
+              = image_tag "loading_indicator.gif"
+              span.contact-us-loading-text Your request is being sent...
+            button.btn.btn-default#contact-us-cancel type="button" data-dismiss="modal" Cancel
             button.btn.btn-primary#contact-us-submit type="button" Send
 
 .modal.fade#contactSuccessModal tabindex="-2" role="dialog" aria-labelledby="contactSuccessModalLabel" aria-hidden="true"
