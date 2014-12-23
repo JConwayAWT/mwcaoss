@@ -41,7 +41,7 @@ class EmploymentApplicationsController < ApplicationController
         format.html { redirect_to "/application_accepted" }
         format.json { render :show, status: :created, location: @employment_application }
       else
-        format.html { render :new }
+        format.html { redirect_to "/application_rejected" }
         format.json { render json: @employment_application.errors, status: :unprocessable_entity }
       end
     end
