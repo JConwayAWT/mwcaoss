@@ -5,18 +5,13 @@ a.btn.btn-default.contact-us-button href="#contact-us" role="button" data-toggle
     #contact-us-form
       = form_for(ContactRequest.new) do |f|
         .modal-content
-          .modal-header
-            button.close type="button" data-dismiss="modal" aria-label="Close"
-              span aria-hidden="true" &times;
-            .modal-title
-              h2 Contact Us
           .modal-body
             .form-group
               = f.text_field :name, autofocus: true, placeholder: "Your name", class: "form-control"
             .form-group
               = f.text_field :company, placeholder: "Your company's name", class: "form-control"
             .form-group
-              = f.text_area :address, placeholder: "Address", rows: 3, class: "form-control"
+              = f.text_area :address, placeholder: "Address", rows: 2, class: "form-control"
             .form-group
               = f.email_field :email, placeholder: "Your email address", class: "form-control"
             .form-group
@@ -28,3 +23,27 @@ a.btn.btn-default.contact-us-button href="#contact-us" role="button" data-toggle
           .modal-footer
             button.btn.btn-default type="button" data-dismiss="modal" Cancel
             button.btn.btn-primary#contact-us-submit type="button" Send
+
+.modal.fade#contactSuccessModal tabindex="-2" role="dialog" aria-labelledby="contactSuccessModalLabel" aria-hidden="true"
+  .modal-dialog
+    .modal-content
+      .modal-header
+        h2
+          | Thanks!
+      .modal-body
+        | Your contact request has been successfully sent.  We'll be in touch with you soon.
+        br
+        br
+        br
+      .modal-footer
+        button.btn.btn-default type="button" data-dismiss="modal" Close
+
+.modal.fade#contactErrorModal tabindex="-2" role="dialog" aria-labelledby="contactErrorModalLabel" aria-hidden="true"
+  .modal-dialog
+    .modal-content
+      .modal-header
+        h2 Error
+      .modal-body
+        | Sorry, but something went wrong while we were trying to send your contact request.  You can try again in a moment, or you can <u>#{link_to "click here to visit our Contact page", "/contact"}</u> and see some other easy eays to contact us.
+      .modal-footer
+        button.btn.btn-default type="button" data-dismiss="modal" Close

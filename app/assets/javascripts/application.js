@@ -27,12 +27,12 @@ $(document).ready(function(){
       data: contact_form
     })
     .done(function(data) {
-      console.log("success");
-      debugger
+      $("#contactUsModal").modal("hide");
+      $("#contactSuccessModal").modal("show");
     })
     .fail(function(data) {
-      console.log("error");
-      debugger
+      $("#contactUsModal").modal("hide");
+      $("#contactErrorModal").modal("show");
     });
     
   });

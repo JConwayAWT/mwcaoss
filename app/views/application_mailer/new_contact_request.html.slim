@@ -1,0 +1,31 @@
+p Hello,
+
+p There is a new contact request for you from www.aoss.us.  Please find the information below:
+
+p
+  b Name:
+  br #{@cr.name.blank? ? "N/A" : @cr.name}
+
+p
+  b Company
+  br #{@cr.company.blank? ? "N/A" : @cr.company}
+
+p
+  b Address
+  br #{@cr.address.blank? ? "N/A" : @cr.address.gsub("\r\n","<br>").gsub("\n","<br>").html_safe}
+
+p
+  b Email
+  br #{@cr.email.blank? ? "N/A" : @cr.email}
+
+p
+  b Phone Number
+  br #{@cr.telephone.blank? ? "N/A" : @cr.telephone}
+
+p
+  b Best Time to Contact
+  br #{@cr.best_time_to_contact.blank? ? "N/A" : @cr.best_time_to_contact}
+
+p
+  b Inquiry Details
+  br #{@cr.inquiry_details.blank? ? "N/A" : @cr.inquiry_details.gsub("\r\n","<br>").gsub("\n","<br>").html_safe}

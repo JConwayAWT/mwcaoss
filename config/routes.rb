@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :employment_applications
+
   resources :contact_requests
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -13,6 +15,7 @@ Rails.application.routes.draw do
   match "/court_services", to: "application#court_services", via: :get
   match "/contact", to: "application#contact", via: :get
   match "/careers", to: "application#careers", via: :get
+  match "/application_accepted", to: "application#application_accepted", via: :get
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

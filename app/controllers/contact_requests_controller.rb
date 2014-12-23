@@ -3,23 +3,25 @@ class ContactRequestsController < ApplicationController
 
   # GET /contact_requests
   # GET /contact_requests.json
-  # def index
-  #   @contact_requests = ContactRequest.all
-  # end
+  def index
+    raise ActionController::RoutingError.new('Not Found')
+  end
 
   # GET /contact_requests/1
   # GET /contact_requests/1.json
-  # def show
-  # end
+  def show
+    raise ActionController::RoutingError.new('Not Found')
+  end
 
   # GET /contact_requests/new
-  # def new
-  #   @contact_request = ContactRequest.new
-  # end
+  def new
+    raise ActionController::RoutingError.new('Not Found')
+  end
 
   # GET /contact_requests/1/edit
-  # def edit
-  # end
+  def edit
+    raise ActionController::RoutingError.new('Not Found')
+  end
 
   # POST /contact_requests
   # POST /contact_requests.json
@@ -28,6 +30,9 @@ class ContactRequestsController < ApplicationController
 
     respond_to do |format|
       if @contact_request.save
+        # alert the appropriate person at AOSS
+        ApplicationMailer.new_contact_request(@contact_request.id).deliver!
+
         format.html { redirect_to @contact_request, notice: 'Contact request was successfully created.' }
         format.json { render :show, status: :created, location: @contact_request }
       else
@@ -39,27 +44,15 @@ class ContactRequestsController < ApplicationController
 
   # PATCH/PUT /contact_requests/1
   # PATCH/PUT /contact_requests/1.json
-  # def update
-  #   respond_to do |format|
-  #     if @contact_request.update(contact_request_params)
-  #       format.html { redirect_to @contact_request, notice: 'Contact request was successfully updated.' }
-  #       format.json { render :show, status: :ok, location: @contact_request }
-  #     else
-  #       format.html { render :edit }
-  #       format.json { render json: @contact_request.errors, status: :unprocessable_entity }
-  #     end
-  #   end
-  # end
+  def update
+    raise ActionController::RoutingError.new('Not Found')
+  end
 
   # DELETE /contact_requests/1
   # DELETE /contact_requests/1.json
-  # def destroy
-  #   @contact_request.destroy
-  #   respond_to do |format|
-  #     format.html { redirect_to contact_requests_url, notice: 'Contact request was successfully destroyed.' }
-  #     format.json { head :no_content }
-  #   end
-  # end
+  def destroy
+    raise ActionController::RoutingError.new('Not Found')
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.

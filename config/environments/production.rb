@@ -79,4 +79,14 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  module Paperclip::Storage::Filesystem
+    def self.extended base
+      base.instance_eval do
+        @options[:url] = "/system/#{@options[:path]}"
+        @options[:path] = ":rails_root/public/system/#{@options[:path]}"
+      end
+    end
+  end
+
 end

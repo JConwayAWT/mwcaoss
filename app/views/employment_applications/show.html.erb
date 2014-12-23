@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @employment_application.name %>
+</p>
+
+<p>
+  <strong>Business name:</strong>
+  <%= @employment_application.business_name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @employment_application.address %>
+</p>
+
+<p>
+  <strong>Telephone:</strong>
+  <%= @employment_application.telephone %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @employment_application.email %>
+</p>
+
+<p>
+  <strong>Current sop details:</strong>
+  <%= @employment_application.current_sop_details %>
+</p>
+
+<p>
+  <strong>How did you hear:</strong>
+  <%= @employment_application.how_did_you_hear %>
+</p>
+
+<%= link_to 'Edit', edit_employment_application_path(@employment_application) %> |
+<%= link_to 'Back', employment_applications_path %>

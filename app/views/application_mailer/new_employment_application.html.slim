@@ -1,0 +1,36 @@
+p Hello,
+
+p There is a new employment application for you from www.aoss.us.  Please find the information below:
+
+p
+  b Name:
+  br #{@app.name.blank? ? "N/A" : @app.name}
+
+p
+  b Business Name
+  br #{@app.business_name.blank? ? "N/A" : @app.business_name}
+
+p
+  b Address
+  br #{@app.address.blank? ? "N/A" : @app.address.gsub("\r\n","<br>").gsub("\n","<br>").html_safe}
+
+p
+  b Phone Number
+  br #{@app.telephone.blank? ? "N/A" : @app.telephone}
+
+p
+  b Email
+  br #{@app.email.blank? ? "N/A" : @app.email}
+
+p
+  b Current SOP Details
+  br #{@app.current_sop_details.blank? ? "N/A" : @app.current_sop_details.gsub("\r\n","<br>").gsub("\n","<br>").html_safe}
+
+p
+  b Referral Information
+  br #{@app.how_did_you_hear.blank? ? "N/A" : @app.how_did_you_hear}
+
+- if @app.resume.exists?
+  p Please download the attached file to view this candidate's resume.
+- else
+  p This candidate did not upload a resume.

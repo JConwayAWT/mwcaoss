@@ -4,3 +4,35 @@
       h1 Careers
   .col-xs-2
     = render 'contact_form'
+
+hr
+
+.row
+  .col-md-8.col-md-offset-2
+    p.medium-text Attorney Outsourcing Support Services is an ever-expanding company that offers limitless opportunities for process servers.  We are continually looking for independent process servers throughout New York, New Jersey, Pennsylvania, Maryland, and in other areas throughout the United States.  We look for seasoned professional process servers with a minimum of three years’ experience and who are currently engaged in serving legal process.  Servers within the five boroughs of New York City are required to be licensed and in good standing with the New York City Department of Consumer Affairs.  To submit your credentials for immediate consideration, please complete the following contact form and upload a copy of your resume.  A member of our staff will be in touch with you shortly.
+
+.row
+  .col-md-6.col-md-offset-3
+    h3.text-center Employment Application
+    = form_for(EmploymentApplication.new, html: {:onsubmit => "return confirm('Choose Cancel to continue working.  Otherwise, choose OK.')"}) do |f|
+      .form-group
+        = f.text_field :name, autofocus: true, placeholder: "Your name", class: "form-control"
+      .form-group
+        = f.text_field :business_name, placeholder: "Current business name", class: "form-control"
+      .form-group
+        = f.text_area :address, placeholder: "Your address", rows: 2, class: "form-control"
+      .form-group
+        = f.text_field :telephone, placeholder: "Your phone number", class: "form-control"
+      .form-group
+        = f.email_field :email, placeholder: "Your email address", class: "form-control"
+      .form-group
+        = f.text_area :current_sop_details, placeholder: "Details of current SOP area", class: "form-control"
+      .form-group
+        = f.text_field :how_did_you_hear, placeholder: "How did you hear of AOSS?", class: "form-control"
+      .form-group
+        = f.label "Please upload your resume"
+        = f.file_field :resume, class: "form-control"
+
+      .pull-right
+        = f.submit "Submit application", confirm: "Are you sure?", class: "btn btn-primary"
+

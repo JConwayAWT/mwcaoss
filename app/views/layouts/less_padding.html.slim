@@ -9,7 +9,7 @@ html
   body
     #full-wrapper
       #full-header
-        nav.navbar.navbar-inverse#no-border-radius.blue-navbar.no-bottom-margin role="navigation"
+        nav.navbar#no-border-radius.no-bottom-margin.black-bottom role="navigation"
           .container-fluid
             .navbar-header
               button.navbar-toggle.collapsed type="button" data-toggle="collapse" data-target="#pgss-navbar"
@@ -18,7 +18,7 @@ html
                 span.icon-bar
                 span.icon-bar
               .navbar-brand
-                a.raleway href="/" style="color:white; font-size:40px; text-decoration: none; background-color: transparent" AOSS
+                a.raleway href="/" style="color: black; font-size:40px; text-decoration: none; background-color: transparent" AOSS
 
             .navbar-collapse.collapse#pgss-navbar
               ul.nav.navbar-nav.navbar-right style="padding-right: 25px;"
@@ -27,22 +27,23 @@ html
                   a.single-header-link href="/about" About
 
                 li
-                  a.single-header-link href="/service_of_process" style="background-color: transparent" Service of Process
+                  a.single-header-link href="/service_of_process" Service of Process
 
                 li
-                  a.single-header-link href="/research_and_investigation" style="background-color: transparent" Research & Investigation
+                  a.single-header-link href="/research_and_investigation" Research & Investigation
 
                 li
-                  a.single-header-link href="/court_services" style="background-color: transparent" Court Services
+                  a.single-header-link href="/court_services" Court Services
 
                 li
-                  a.single-header-link href="/careers" style="background-color: transparent" Careers
+                  a.single-header-link href="/careers" Careers
 
                 li
-                  a.single-header-link href="/contact" style="background-color: transparent" Contact
+                  a.single-header-link href="/contact" Contact
 
       #full-content
-        = yield
+        #body-container
+          = yield
 
       #full-footer
         .footer#footer
