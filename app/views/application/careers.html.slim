@@ -34,5 +34,8 @@ hr
         = f.file_field :resume, required: true, class: "form-control"
 
       .pull-right
-        = f.submit "Submit application", class: "btn btn-primary"
+        .application-submitted
+          = image_tag "loading_indicator.gif"
+          span.application-submitted-text Please wait while your application is sent...
+        = f.submit "Submit application", class: "btn btn-primary", id: "submit-application-button"
 

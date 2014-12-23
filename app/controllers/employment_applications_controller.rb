@@ -31,7 +31,7 @@ class EmploymentApplicationsController < ApplicationController
     respond_to do |format|
       if @employment_application.save
         # alert the appropriate person at AOSS
-        ApplicationMailer.new_employment_application(@employment_application.id).deliver!
+        #ApplicationMailer.new_employment_application(@employment_application.id).deliver!
 
         format.html { redirect_to "/application_accepted" }
         format.json { render :show, status: :created, location: @employment_application }

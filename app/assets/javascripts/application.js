@@ -17,6 +17,11 @@
 
 $(document).ready(function(){
 
+  $("#submit-application-button").click(function(){
+    $(this).hide();
+    $(".application-submitted").show();
+  });
+
   $("#contactUsModal").on('shown.bs.modal', function(e){
     $("#contact_request_name").focus();
   });
