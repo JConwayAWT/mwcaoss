@@ -22,10 +22,15 @@ html
                 span.icon-bar
                 span.icon-bar
               .navbar-brand
-                a.raleway href="/" style="color: black; font-size:40px; text-decoration: none; background-color: transparent" AOSS
+                a.raleway href="/" style="color: black; font-size:40px; text-decoration: none; background-color: transparent" 
+                  | AOSS, 
+                  span.inc-text Inc.
 
             .navbar-collapse.collapse#pgss-navbar
               ul.nav.navbar-nav.navbar-right style="padding-right: 25px;"
+
+                li
+                  a.single-header-link href="/" Home
 
                 li
                   a.single-header-link href="/about" About
@@ -58,6 +63,6 @@ html
             .row
               .col-md-12
                 .text-center.soft-gray-text.small-text.text-padded-top
-                  | Portions of this site ©#{Time.now.year} by Attorney Outsourcing Support Services
+                  | Portions of this site ©#{Time.now.year} by Attorney Outsourcing Support Services, Inc.
 
 = render 'contact_modal'
