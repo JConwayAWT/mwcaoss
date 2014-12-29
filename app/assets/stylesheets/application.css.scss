@@ -220,6 +220,12 @@ nav.navbar{
   border-bottom: thick solid black;
 }
 
+.new-york-non-home{
+  height: 150px;
+  overflow: hidden;
+  opacity: 0.3;
+}
+
 .black-bottom{
   border-bottom: thick solid black;
 }
@@ -252,4 +258,22 @@ nav.navbar{
   font-weight: 300;
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
+}
+
+.header-hr{
+  margin-top: 0px;
+}
+
+.page-headline-text{
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 50px;
+}
+
+.nyc-background{
+  background-image: url(asset_path("newyorkcity.png"));
+}
+
+.page-headline-row{
+  margin-top: -95px;
 }
