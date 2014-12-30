@@ -46,6 +46,11 @@ nav.navbar{
   font-weight: 700;
 }
 
+.aoss-temp-logo{
+  height: 57px;
+  margin-top: -19px;
+}
+
 #full-wrapper{
   min-height: 100%;
   position: relative;
@@ -180,13 +185,32 @@ nav.navbar{
   font-size: 24px;
 }
 
-.home-page-header{
-  font-size: 35px;
-  font-weight: 700;
-  padding: 20px 0px;
-  margin-bottom: 15px;
+.soft-gray-background{
   background-color: #F4F4F4;
+}
+
+.aoss-letter{
+  color: rgb(66, 139, 211);
+}
+
+.some-space{
+  margin-bottom: 15px;
+}
+
+.home-page-header{
+  font-size: 46px;
+  font-weight: 700;
   font-family: 'Roboto', sans-serif;
+}
+
+.tiny-little-text{
+  font-size: 8pt;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+.like-table-column{
+  display: table-row;
 }
 
 .medium-text{
@@ -195,18 +219,30 @@ nav.navbar{
   font-weight: 300;
 }
 
+.small-text{
+  font-size: 10pt;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
 .callout-right{
   width: 50%;
-  margin: 20px 20px;
   float: right;
-  background-color: #eeeeee;
+  background-color: #945FFF;
   padding: 20px 20px;
   margin: 5px 5px;
   border-radius: 10px;
-  font-size: 14pt;
-  font-weight: 400;
-  font-family: 'Roboto', sans-serif;
   text-align: center;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  font-size: 30px;
+  line-height: 30px;
+  box-shadow: 6px 7px 10px #c9c9c9;
+}
+
+.three-hundred{
+  font-weight: 300;
 }
 
 .contact-us-button{
@@ -248,6 +284,7 @@ nav.navbar{
   width: 20%;
   display: inline-block;
   text-align: center;
+  display: table-cell;
   .affiliation-image{
     width: 65%;
   }

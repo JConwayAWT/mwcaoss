@@ -1,10 +1,4 @@
-.new-york
-  = image_tag "newyorkcity.png", size: "1286x400", class: "full-width-image"
-
-.row
-  .col-md-12
-    .text-center.home-page-header
-      | Attorney Outsourcing Support Services
+= render 'hero_image'
 
 .row
   .col-md-8.col-md-offset-2
@@ -21,12 +15,13 @@
 hr
 
 .row
-  .col-md-8.col-md-offset-2
+  .col-md-8.col-md-offset-2.like-table-column
     .affiliation-image-container
       = image_tag "maapps.png", class: "affiliation-image"
 
     .affiliation-image-container
       = image_tag "napps.jpg", class: "affiliation-image"
+      .tiny-little-text National Association of Professional Process Servers
 
     .affiliation-image-container
       = image_tag "njppsa.gif", class: "affiliation-image"

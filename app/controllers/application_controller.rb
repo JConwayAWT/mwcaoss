@@ -8,6 +8,7 @@ class ApplicationController < ActionController::Base
   end
 
   def about
+    render layout: "less_padding"
   end
 
   def service_of_process
