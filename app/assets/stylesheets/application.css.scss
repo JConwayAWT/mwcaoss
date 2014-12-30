@@ -46,6 +46,12 @@ nav.navbar{
   font-weight: 700;
 }
 
+.logo-link{
+  &:hover{
+    background-color: transparent;
+  }
+}
+
 .aoss-temp-logo{
   height: 57px;
   margin-top: -19px;
