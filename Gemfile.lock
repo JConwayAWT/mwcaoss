@@ -75,6 +75,7 @@ GEM
       cocaine (~> 0.5.3)
       mime-types
     pg (0.17.1)
+    pg (0.17.1-x86-mingw32)
     polyglot (0.3.5)
     rack (1.5.2)
     rack-test (0.6.2)
@@ -138,12 +139,15 @@ GEM
       polyglot (>= 0.3.1)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
+    tzinfo-data (1.2014.10)
+      tzinfo (>= 1.0.0)
     uglifier (2.6.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
 
 PLATFORMS
   ruby
+  x86-mingw32
 
 DEPENDENCIES
   autoprefixer-rails
