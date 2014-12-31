@@ -17,6 +17,22 @@
 
 $(document).ready(function(){
 
+  var nLocationImages = $(".location-image").length;
+  var currentImageIndex = 0;
+  var nextImageIndex = 1;
+
+  setInterval(function(){
+    currentImage = $( $(".location-image")[currentImageIndex] );
+    nextImage = $( $(".location-image")[nextImageIndex] );
+
+    currentImage.fadeTo(1500, 0);
+    nextImage.fadeTo(1500, 1);
+
+    currentImageIndex = (currentImageIndex + 1) % nLocationImages;
+    nextImageIndex = (currentImageIndex + 1) % nLocationImages;
+
+  }, 6000);
+
   $("#submit-application-button").click(function(){
     $(this).hide();
     $(".application-submitted").show();
