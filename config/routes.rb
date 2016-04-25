@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  match "/alerts/delete", to: "alerts#delete", via: :get
+  resources :alerts
+
   resources :employment_applications
 
   resources :contact_requests
@@ -17,6 +20,8 @@ Rails.application.routes.draw do
   match "/careers", to: "application#careers", via: :get
   match "/application_accepted", to: "application#application_accepted", via: :get
   match "/application_rejected", to: "application#application_rejected", via: :get
+  match "/delete_alerts", to: "alerts#delete_alerts", via: :post
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

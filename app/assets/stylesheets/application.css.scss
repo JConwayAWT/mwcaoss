@@ -330,3 +330,23 @@ nav.navbar{
   position:absolute;
   left:0;
 }
+
+.sitewide-alert-row{
+  background-color: #FF8484 !important;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  .sitewide-alert-text{
+    p{
+      font-size: 14px;
+    }
+  }
+}
+
+.padless{
+  padding: 0px 0px;
+}
+
+.ep-padding{
+  padding-left: 8%;
+  padding-right: 8%;
+}

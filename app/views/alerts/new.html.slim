@@ -1,0 +1,22 @@
+.row.new-alert-row style="margin-left: 0px; margin-right: 0px; margin-bottom: 65px;"
+  .col-md-3.col-md-offset-1
+    .text-left
+      h2.new-alerts New Alert
+
+  .col-md-5.form-top
+    - if flash[:alert]
+      .alert.alert-danger
+        b Error: &nbsp;
+        = flash.alert
+    = form_for(@alert) do |f|
+      .form-group
+        = f.label "Alert text"
+        = f.text_area :message, autofocus: true, placeholder: "Enter the full text of the alert that you would like to be displayed", required: true, rows: 4, class: "form-control"
+      .form-group
+        = f.label "Hours to display"
+        = f.select :lifespan_in_hours, ((1..48).map {|i| [i, i]}), {selected: 12}, class: "form-control"
+      .form-group
+        = f.label "Administrator password"
+        = f.password_field :password, required: true, class: "form-control"
+      .text-right
+        = f.submit "Submit", class: "btn btn-primary"

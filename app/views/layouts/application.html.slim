@@ -13,6 +13,12 @@ html
 
   body
     #full-wrapper
+      - if Alert.any?
+        .row.padless.sitewide-alert-row style="margin-left: 0px; margin-right: 0px;"
+          .col-md-12.ep-padding
+            - Alert.all.each do |alert|
+              b Notice: 
+              .sitewide-alert-text = simple_format(alert.message.html_safe)
       #full-header
         nav.navbar#no-border-radius.no-bottom-margin.black-bottom role="navigation"
           .container-fluid

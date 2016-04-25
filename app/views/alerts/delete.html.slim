@@ -1,0 +1,28 @@
+.row.new-alert-row style="margin-left: 0px; margin-right: 0px; margin-bottom: 65px;"
+  .col-md-3.col-md-offset-1
+    .text-left
+      h2.new-alerts Delete Alerts
+
+  .col-md-5.delete-alerts-form-top
+    - if flash[:alert]
+      .alert.alert-danger
+        b Error: &nbsp;
+        = flash.alert
+    - if @alerts.any?
+      b Check the box for each alert that you would like to delete.
+      br
+      br
+      = form_tag "/delete_alerts", method: "post" do
+        - @alerts.each do |alert|
+          = label_tag do
+            = check_box_tag alert.id
+            = "   " + alert.message.truncate(100, omission: "...")
+          br
+        br
+        .form-group
+          = label_tag "Administrator password"
+          = password_field_tag "Password", "", class: "form-control"
+        .text-right
+          = submit_tag "Submit", class: "btn btn-primary"
+    - else
+      b There are no alerts to delete at this time.

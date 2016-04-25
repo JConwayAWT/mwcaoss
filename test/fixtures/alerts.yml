@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  message: MyText
+  lifespan_in_hours: 1
+
+two:
+  message: MyText
+  lifespan_in_hours: 1
