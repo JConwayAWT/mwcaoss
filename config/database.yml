@@ -15,7 +15,6 @@
 # gem 'pg'
 #
 default: &default
-  adapter: postgresql
   encoding: unicode
   # For details on connection pooling, see rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
@@ -24,6 +23,7 @@ default: &default
 development:
   <<: *default
   database: aoss_development
+  adapter: sqlite3
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -58,6 +58,7 @@ development:
 test:
   <<: *default
   database: aoss_test
+  adapter: sqlite3
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -83,3 +84,4 @@ production:
   database: aoss_production
   username: postgres
   password: <%= ENV['AOSS_DATABASE_PASSWORD'] %>
+  adapter: postgresql
